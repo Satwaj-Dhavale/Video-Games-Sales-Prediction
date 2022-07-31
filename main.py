@@ -29,7 +29,6 @@ data["Country"] = data[["NA", "EU", "JP", "Other"]].idxmax(1, skipna=True)
 
 
 def rm_outlier(df, list_of_keys):
-    # Looked for ways to remove outliers but this was the easiest one :(
     df_out = df
     for key in list_of_keys:
         first_quartile = df_out[key].describe()['25%']
